@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Location, useLocation } from "../../app/providers/locationProvider";
 import styles from "./index.module.scss";
 
@@ -19,6 +20,10 @@ const externalLinks = [
 export const SiteMap = () => {
     const { setLocation } = useLocation();
     setLocation(Location.SiteMap);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className={styles.sitemap}>
