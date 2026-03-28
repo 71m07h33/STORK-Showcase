@@ -8,9 +8,16 @@ const LinksMapping : Record<string, string> = {
     "Kinesiology Books": "https://kinesiologybooks.org/index.php/stork/index",
 }
 
-export const Links = () => {
+type LinksProps = {
+    isMobile: boolean;
+}
+
+export const Links = (props: LinksProps) => {
+
+    const { isMobile } = props;
+
     return (
-        <div className={styles.links}>
+        <div className={`${styles.links} ${isMobile ? styles.mobile : ''}`}>
             {Object.keys(LinksMapping).map((key, idx, arr) => {
                 return (
                     <>
@@ -24,7 +31,7 @@ export const Links = () => {
                                 {key}
                             </a>
                         </div>
-                        {idx !== arr.length - 1 && (
+                        {!isMobile && idx !== arr.length - 1 && (
                             <span className={styles.verticalSeparator} />
                         )}
                     </>

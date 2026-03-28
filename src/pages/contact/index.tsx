@@ -57,7 +57,7 @@ STORK team
                     <Input label="Message" value={message} onChange={setMessage} height="paragraph"/>
                 </div>
                 <a href={mailtoHref}>
-                    <Button content="Contact us" color="white" />
+                        <Button color="white">Contact us</Button>
                 </a>
             </div>
         </div>

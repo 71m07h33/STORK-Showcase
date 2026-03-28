@@ -46,6 +46,13 @@
     align-self: stretch;
 }
 
+.teamTitle {
+    align-self: stretch;
+    padding: 0 3.75rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 .team {
     display: flex;
     padding: 6.25rem 0;
@@ -53,11 +60,9 @@
     align-items: flex-start;
     gap: 4.6875rem;
     align-self: stretch;
+
+    &.mobile {
+        padding: 6.25rem 1.25rem;
+    }
 }
 
-.teamTitle {
-    align-self: stretch;
-    padding: 0 3.75rem;
-    font-size: 2rem;
-    font-weight: 700;
-}

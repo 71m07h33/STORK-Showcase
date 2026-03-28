@@ -1,20 +1,18 @@
-import { useEffect } from "react";
 import { Location, useLocation } from "../../app/providers/locationProvider";
 import { AboutHeader } from "./header";
 import { AboutTeam } from "./team";
+import { useIsMobileWidth } from "../../hooks/useIsMobileWidth";
 
 export const About = () => {
     const { setLocation } = useLocation();
     setLocation(Location.About);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    const isMobile = useIsMobileWidth();
     
     return (
         <div>
-            <AboutHeader />
-            <AboutTeam />
+            <AboutHeader isMobile={isMobile} />
+            <AboutTeam isMobile={isMobile} />
         </div>
     );
 }

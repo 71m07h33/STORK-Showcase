@@ -10,12 +10,13 @@ export type TileProps = {
     role: string;
     linkedin?: string | null;
     twitter?: string | null;
+    isMobile?: boolean;
 }
 
 export const Tile = (props: TileProps) => {
     return (
-        <div className={styles.tile} style={{ backgroundImage: `url(${props.picture})` }}>
-            <div className={styles.pill}>
+        <div className={`${styles.tile} ${props.isMobile ? styles.mobile : ''}`} style={{ backgroundImage: `url(${props.picture})` }}>
+            <div className={`${styles.pill} ${props.isMobile ? styles.mobile : ''}`}>
                 <div className={styles.content}>
                     <div className={styles.pillTitle}>
                         <h1>{props.name}</h1>

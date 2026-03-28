@@ -66,7 +66,7 @@ export const MembershipPrices = () => {
                         <p className={styles.explanationDescription}>Membership fee for {item}</p>
                     </div>
                     <a href={stripeLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                        <Button content="Join us" color="black" />
+                            <Button color="black">Join us</Button>
                     </a>
                 </div>
              </div>

@@ -56,10 +56,11 @@ export const HomeWhom = () => {
                     ))}
             </div>
             <Button
-                content='Join us'
                 color='white'
                 onClick={() => navigate('/membership') }
-            />
+            >
+                Join us
+            </Button>
         </div>
     );
 }

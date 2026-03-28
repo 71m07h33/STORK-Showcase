@@ -3,11 +3,17 @@ import linkedinIcon from '../../../../assets/icons/linkedin.svg';
 import twitterIcon from '../../../../assets/icons/twitter.svg';
 import youtubeIcon from '../../../../assets/icons/youtube.svg';
 
-export const Social = () => {
+type SocialProps = {
+    isMobile: boolean;
+}
+
+export const Social = (props: SocialProps) => {
+    const { isMobile } = props;
+
     return (
-        <div className={styles.social}>
+        <div className={`${styles.social} ${isMobile ? styles.mobile : ''}`}>
             <h1 className={styles.title}>STORK</h1>
-            <div className={styles.contentContainer}>
+            <div className={`${styles.contentContainer} ${isMobile ? styles.mobile : ''}`}>
                 <div className={styles.content}>
                     <h2 className={styles.subtitle}>A question ?</h2>
                     <a className={styles.button} href="/contact-us">Contact Us</a>

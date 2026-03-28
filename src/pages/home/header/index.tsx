@@ -11,10 +11,11 @@ export const HomeHeader = () => {
             <div className={styles.content}>
                 <p>Providing a platform to come together to improve methods and practices within our disciplines</p>
                 <Button
-                    content="Find out more"
                     color="white"
                     onClick={() => navigate('/missions')}
-                />
+                >
+                    Find out more
+                </Button>
             </div>
         </div>
     );

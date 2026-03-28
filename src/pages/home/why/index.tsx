@@ -65,7 +65,9 @@ export const HomeWhy = () => {
                 <div className={style.explanation}>
                     <h2 className={style.explanationTitle}>{itemsData[item].bootstrap}</h2>
                     <p className={style.explanationDescription}>{itemsData[item].description}</p>
-                    <Button content={`Learn more about ${itemsData[item].title}`} color="black" onClick={() => navigate('/missions')}/>
+                        <Button color="black" onClick={() => navigate('/missions')}>
+                            {`Learn more about ${itemsData[item].title}`}
+                        </Button>
                 </div>
             </div>
         </div>

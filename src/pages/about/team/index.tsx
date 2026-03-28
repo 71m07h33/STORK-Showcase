@@ -55,7 +55,11 @@ const membersData: Record<Members, TileProps> = {
     },
 };
 
-export const AboutTeam = () => {
+type AboutTeamProps = {
+    isMobile: boolean;
+}
+
+export const AboutTeam = ({ isMobile }: AboutTeamProps) => {
     const tilesRef = useRef<HTMLDivElement>(null);
 
     const scroll = (direction: 'left' | 'right') => {
@@ -67,13 +71,13 @@ export const AboutTeam = () => {
     };
 
     return (
-        <div className={styles.team}>
+        <div className={`${styles.team} ${isMobile ? styles.mobile : ''}`}>
             <h1 className={styles.teamTitle}>Our team</h1>
             <div className={styles.content}>
                 <div className={styles.tiles} ref={tilesRef}>
                     {Object.values(Members).map((member) => (
                         <div className={styles.tileWrapper} key={member}>
-                            <Tile {...membersData[member]} />
+                            <Tile {...membersData[member]} isMobile={isMobile} />
                         </div>
                     ))}
                 </div>

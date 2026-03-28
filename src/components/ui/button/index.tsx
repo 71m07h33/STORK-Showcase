@@ -12,15 +12,16 @@ import styles from './index.module.scss';
  *
  * @example
  * <Button
- *   content="Click me"
  *   selected={true}
  *   color="white"
  *   size={1.5}
  *   onClick={() => alert('Button clicked!')}
- * />
+ * >
+ *  Hello World
+ * </Button>
  */
 type ButtonProps = {
-    content: string;
+    children: React.ReactNode;
     selected?: boolean;
     color: 'black' | 'white';
     size?: number;
@@ -39,7 +40,7 @@ export const Button = (props: ButtonProps) => {
             style={{ '--button-size': `${props.size ?? 1}rem` } as CSSProperties}
             onClick={props.onClick}
         >
-            {props.content}
+            {props.children}
         </button>
     );
 }
