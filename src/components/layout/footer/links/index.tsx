@@ -5,6 +5,7 @@ const LinksMapping : Record<string, string> = {
     "Site Map": "/site-map",
     "SportRxiv": "https://sportrxiv.org/index.php/server",
     "Communication in Kinesiology": "https://storkjournals.org/index.php/cik",
+    "Kinesiology Books": "https://kinesiologybooks.org/index.php/stork/index",
 }
 
 export const Links = () => {

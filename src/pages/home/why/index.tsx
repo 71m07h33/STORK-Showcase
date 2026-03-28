@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 enum Items {
     Sportrxiv = 'Sportrxiv',
     CommunicationInKinesiology = 'CommunicationInKinesiology',
-    RegisteredReports = 'RegisteredReports',
+    KinesiologyBooks = 'KinesiologyBooks',
     Webinars = 'Webinars',
     Workshops = 'Workshops',
 }
@@ -22,10 +22,10 @@ const itemsData: Record<Items, { title: string; bootstrap: string; description: 
         bootstrap: 'Communication in Kinesiology, Pioneering Open Science in Movement Sciences',
         description: 'The movement sciences community has been at the forefront of open science initiatives, with many researchers embracing the principles of transparency, accessibility, and collaboration. By sharing their work openly, researchers in the movement sciences are helping to advance the field and improve the lives of people around the world.',
     },
-    [Items.RegisteredReports]: {
-        title: 'Registered Reports in Kinesiology',
-        bootstrap: 'Registered Reports in Kinesiology, Enhancing Research Transparency and Reproducibility',
-        description: 'Registered reports are a type of scientific publication that allows researchers to pre-register their study design and analysis plan before conducting their research. This approach helps to reduce bias and increase transparency in the research process, which can lead to more reliable and reproducible results.',
+    [Items.KinesiologyBooks]: {
+        title: 'Kinesiology Books',
+        bootstrap: 'Kinesiology Books, Enhancing Research Transparency and Reproducibility',
+        description: 'Kinesiology Books offer comprehensive resources that support learning, research, and teaching in the movement sciences. These open-access books promote transparency and reproducibility by making high-quality information freely available to students, educators, and researchers worldwide.',
     },
     [Items.Webinars]: {
         title: 'Webinars',
