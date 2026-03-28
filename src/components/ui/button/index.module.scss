@@ -21,12 +21,18 @@
         &.selected {
             background-color: $black;
             color: $white;
+            img {
+                filter: invert(100%);
+            }
         }
 
         &:hover {
             background-color: $black;
             color: $white;
             cursor: pointer;
+            img {
+                filter: invert(100%);
+            }
         }
     }
 
